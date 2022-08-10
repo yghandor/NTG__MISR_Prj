@@ -1,13 +1,13 @@
-package org.ntg.test.userbackend;
+package org.ntg.training.backendForPortal;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class UserBackEndApplicationTests {
+class BackendForPortalApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }

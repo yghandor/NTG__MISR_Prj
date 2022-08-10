@@ -1,16 +1,14 @@
-package org.ntg.test.userbackend.dto;
+package org.ntg.training.backendForPortal.dto;
 
 public class LoginRequest {
 
-    public String getUserName() {
-        return userName;
+    public String getUser_name() {
+        return user_name;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
     }
-
-    private String userName ;
 
     public String getPassword() {
         return password;
@@ -20,6 +18,7 @@ public class LoginRequest {
         this.password = password;
     }
 
+    private String user_name;
     private String password;
 
 }

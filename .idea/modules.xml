@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/NTG__MISR_Prj.iml" filepath="$PROJECT_DIR$/.idea/NTG__MISR_Prj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backendForPortal/backendForPortal.iml" filepath="$PROJECT_DIR$/backendForPortal/backendForPortal.iml" />
     </modules>
   </component>
 </project>
