@@ -1,19 +1,29 @@
 package org.ntg.training.backendForPortal.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "admin_users")
 public class users {
+
     @Id
     @Column(name = "id")
+    @GeneratedValue
     private Long recID;
 
     @Column(name = "user_name")
     private String userName;
+
+    public long getManager_id() {
+        return (manager_id == null) ? -1 : manager_id;
+    }
+
+    public void setManager_id(Long manager_id) {
+        this.manager_id = (manager_id == null) ? null : (manager_id == -1) ? null : manager_id;
+    }
+
+    @Column(name = "manager_id")
+    private Long manager_id;
 
     public String getUserName() {
         return userName;
@@ -44,7 +54,7 @@ public class users {
     private String fullName;
 
     public void setRecID(Long recID) {
-        this.recID = recID;
+        this.recID = (recID == null) ? null : (recID == -1) ? null : recID;
     }
 
 

@@ -9,11 +9,10 @@ import {HttpClient} from "@angular/common/http";
 export class EmployeeListComponent implements OnInit {
     EmployeeData: any[] | undefined;
     cols: any = [
-        { field: 'recID', header: 'ID #', customExportHeader: 'Employee ID' },
-        { field: 'fullName', header: 'Name' },
-        { field: 'userName', header: 'User Name' }
-     ];
-
+        {field: 'recID', header: 'ID #', customExportHeader: 'Employee ID'},
+        {field: 'fullName', header: 'Name'},
+        {field: 'userName', header: 'User Name'}
+    ];
 
 
     constructor(private _http: HttpClient) {
@@ -26,7 +25,7 @@ export class EmployeeListComponent implements OnInit {
             this.LoadData();
 
 
-        }, 1000);
+        }, 100);
 
     }
 
@@ -42,5 +41,55 @@ export class EmployeeListComponent implements OnInit {
 
             }
         );
+    }
+
+    ShowAddDialog = false;
+    userName: any;
+    full_name: any;
+
+    DoAdd() {
+        this.ShowAddDialog = true;
+    }
+
+    IsPostingData = false;
+
+    HandleAdd() {
+        this.IsPostingData = true;
+
+        let body = {
+            "recID": -1,
+            "userName": this.userName,
+            "manager_id": -1,
+            "password": "ntg",
+            "fullName": this.full_name
+        };
+        let url = '/rest/addUser';
+        this._http.post(url, body).subscribe((rep: any) => {
+
+            if (rep.returnValue) {
+                this.ShowAddDialog = false;
+                this.EmployeeData?.push(rep.returnValue);
+
+                this.refreshAray();
+
+            } else {
+                alert(rep.errorMessage);
+            }
+
+            this.IsPostingData = false;
+
+        }, error => {
+
+            alert(error.message || error);
+            this.IsPostingData = false;
+
+        })
+    }
+
+    private refreshAray() {
+        let temp = this.EmployeeData;
+        this.EmployeeData = [];
+
+        temp?.forEach(row=>this.EmployeeData?.push(row));
     }
 }

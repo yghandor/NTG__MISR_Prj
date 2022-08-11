@@ -1,35 +1,41 @@
 <div class="card">
     <h2>Employee List</h2>
 
-    <span *ngIf="!EmployeeData"><i class="pi pi-spinner pi-spin"></i>Loading .....</span>
 
-
-    <p-table #dt *ngIf="EmployeeData" [value]="EmployeeData" sortMode="multiple"
-             [columns]="cols"
-    >
-
-        <ng-template pTemplate="caption">
-            <div class="flex">
-                <button type="button" pButton pRipple icon="pi pi-file" (click)="dt.exportCSV()" class="mr-2" pTooltip="CSV" tooltipPosition="bottom"></button>
-             </div>
-        </ng-template>
-        <ng-template pTemplate="header">
-            <tr>
-                 <th pSortableColumn="recID">ID # <p-sortIcon field="recID"></p-sortIcon></th>
-                <th pSortableColumn="fullName">Full Name<p-sortIcon field="fullName"></p-sortIcon></th>
-                <th pSortableColumn="userName">User Name<p-sortIcon field="userName"></p-sortIcon></th>
-
-
-             </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-row>
-            <tr>
-                <td>{{row.recID}}</td>
-                <td>{{row.fullName}}</td>
-                <td>{{row.userName}}</td>
-             </tr>
-        </ng-template>
-    </p-table>
+    <app-ntgtree-table [inputData]="EmployeeData" [cols]="cols"
+                       [EnableAdd]="true" (AddClicked)="DoAdd()"
+    ></app-ntgtree-table>
 
 
 </div>
+
+
+<p-dialog [(visible)]="ShowAddDialog" [closable]="true" [transitionOptions]="'0ms'" position="center"
+          [responsive]="true">
+    <ng-template pTemplate="header">
+        <h6><i class="pi pi-plus-circle"></i> Add</h6>
+    </ng-template>
+
+    <form #Addfrm>
+
+        <span class="p-float-label formgroup">
+            <input [(ngModel)]="full_name"  required id="float-input2" name="float-input2" type="text" pInputText>
+            <label for="float-input2">Full Name</label>
+        </span>
+        <br>
+        <span class="p-float-label">
+            <input [(ngModel)]="userName"  required id="float-input1" name="float-input1" type="text" pInputText>
+            <label for="float-input1">User Name</label>
+        </span>
+
+    </form>
+
+    <ng-template pTemplate="footer">
+        <div style="text-align: right">
+            <button [disabled]="!Addfrm.checkValidity() || IsPostingData" pButton label="Add" class="p-button-outlined"
+                    (click)="HandleAdd()"
+                    icon="pi pi-plus {{(IsPostingData) ? 'pi-spin' : ''}}"></button>
+
+        </div>
+    </ng-template>
+</p-dialog>

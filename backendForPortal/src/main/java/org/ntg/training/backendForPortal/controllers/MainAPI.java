@@ -1,5 +1,6 @@
 package org.ntg.training.backendForPortal.controllers;
 
+import org.ntg.training.backendForPortal.dto.GenricResponse;
 import org.ntg.training.backendForPortal.dto.LoginRequest;
 import org.ntg.training.backendForPortal.dto.LoginResponse;
 import org.ntg.training.backendForPortal.entities.users;
@@ -42,6 +43,22 @@ public class MainAPI {
             return new LoginResponse(null, ex.getMessage());
         }
 
+
+    }
+
+    @PostMapping("/addUser")
+    GenricResponse AddUser(@RequestBody users user) {
+        try {
+
+            user.setPassword("ntg");
+
+            users addedUser = this._usersRepo.save(user);
+
+            return new GenricResponse(null,addedUser);
+
+        } catch (Exception ex) {
+            return new GenricResponse(ex.getMessage(), null);
+        }
 
     }
 }

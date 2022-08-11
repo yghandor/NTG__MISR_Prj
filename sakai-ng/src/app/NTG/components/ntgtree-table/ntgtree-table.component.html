@@ -1,0 +1,33 @@
+<span *ngIf="!inputData"><i class="pi pi-spinner pi-spin"></i>Loading .....</span>
+
+<p-treeTable *ngIf="inputData" [value]="convertedData" [columns]="cols">
+    <ng-template pTemplate="caption">
+        <div style="text-align: right" >
+            <button *ngIf="EnableAdd" pButton label="Add" class="p-button-outlined" icon="pi pi-plus" (click)="Add()"></button>
+
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th *ngFor="let col of cols" [ttSortableColumn]="col.field">
+                {{col.header}}
+                <p-treeTableSortIcon [field]="col.field"></p-treeTableSortIcon>
+
+            </th>
+
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowNode let-rowData="rowData"  >
+        <tr>
+            <td *ngFor="let col of cols ; let i = index">
+                <i class="pi pi-spin">
+                    <p-treeTableToggler *ngIf="i==0" [rowNode]="rowNode"></p-treeTableToggler>
+
+                </i>
+                {{rowData[col.field]}}
+
+            </td>
+
+        </tr>
+    </ng-template>
+</p-treeTable>
