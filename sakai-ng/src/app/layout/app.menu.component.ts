@@ -23,7 +23,7 @@ export class AppMenuComponent implements OnInit {
             {
                 label: 'User Managements',
                 items: [
-                    { label: 'Employee List', icon: 'pi pi-fw pi-id-card', routerLink: ['/uikit/formlayout'] },
+                    { label: 'Employee List', icon: 'pi pi-fw pi-id-card', routerLink: ['/employee/list'] },
 
                 ]
             }
