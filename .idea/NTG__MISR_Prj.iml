@@ -7,6 +7,8 @@
       <excludeFolder url="file://$MODULE_DIR$/sakai-ng/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/Front/dist" />
       <excludeFolder url="file://$MODULE_DIR$/Front/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/angularblocks/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/angularblocks/tmp" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

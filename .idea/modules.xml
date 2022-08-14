@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Front/Front.iml" filepath="$PROJECT_DIR$/Front/Front.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/NTG__MISR_Prj.iml" filepath="$PROJECT_DIR$/.idea/NTG__MISR_Prj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/angularblocks/angularblocks.iml" filepath="$PROJECT_DIR$/angularblocks/angularblocks.iml" />
       <module fileurl="file://$PROJECT_DIR$/backendForPortal/backendForPortal.iml" filepath="$PROJECT_DIR$/backendForPortal/backendForPortal.iml" />
     </modules>
   </component>
