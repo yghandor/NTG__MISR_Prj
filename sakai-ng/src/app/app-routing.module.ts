@@ -16,7 +16,8 @@ import {EmployeeMngModule} from "./NTG/pages/employee-mng/employee-mng.module";
                     { path: 'documentation', loadChildren: () => import('./demo/components/documentation/documentation.module').then(m => m.DocumentationModule) },
                     { path: 'blocks', loadChildren: () => import('./demo/components/primeblocks/primeblocks.module').then(m => m.PrimeBlocksModule) },
                     { path: 'pages', loadChildren: () => import('./demo/components/pages/pages.module').then(m => m.PagesModule) },
-                    { path:'employee', loadChildren : () => EmployeeMngModule }
+                    { path:'employee', loadChildren : () => EmployeeMngModule },
+                    {path : 'designer',loadChildren : () => import('./NTG/pages/designer/designer.module').then(m=>m.DesignerModule)}
 
                 ],
             },

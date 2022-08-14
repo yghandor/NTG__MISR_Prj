@@ -1,0 +1,23 @@
+<svg *ngIf="info" [attr.height]="info.height" [attr.width]="info.width"
+
+
+     style="transform: translate({{info.left}}px , {{info.top}}px)"
+>
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"
+            style="stop-color:rgb(255,255,255);stop-opacity:1"/>
+      <stop offset="100%"
+            style="stop-color:rgb(200,200,200);stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <rect
+    style="stroke-width:3;stroke:rgb(0,0,0)"
+    [attr.height]="info.height" [attr.width]="info.width" fill="url(#grad1)"/>
+
+  <text fill="black" font-size="45px" font-family="Verdana"
+
+        [attr.x]="(info.width - TextWidth) / 2 " [attr.y]="info.height / 2 + 20">{{info.label}}</text>
+  Sorry, your browser does not support inline SVG.
+</svg>

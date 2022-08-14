@@ -1,0 +1,18 @@
+.DesignArea {
+  position: relative;
+  overflow: auto;
+  height: 100%;
+  background-color: lightblue;
+  flex: calc(100% - 150px);
+}
+.Designer{
+    display: flex;
+  height: calc(100vh - 161px);
+}
+
+.Toolbar{
+  flex: 150px;
+  background-color: rebeccapurple;
+  height: 100%;
+  position: relative;
+}

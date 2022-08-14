@@ -9,6 +9,8 @@
       <excludeFolder url="file://$MODULE_DIR$/Front/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/angularblocks/dist" />
       <excludeFolder url="file://$MODULE_DIR$/angularblocks/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/OMar/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/OMar/tmp" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -1,0 +1,31 @@
+<div class="Designer">
+  <div class="Toolbar">
+
+      <app-ship *ngFor="let ship of ToolBarInfo"
+
+                [info]="ship"
+                draggable="true"
+
+                (dragstart)="handleDragStart(ship)"
+
+      ></app-ship>
+
+  </div>
+<div class="DesignArea" (mousemove)="HandleMouseMove($event)" (mouseup)="HandleMouseUp()"
+    (dragover)="$event.preventDefault()"
+    #drawdiv
+     (drop)="HandleDrop($event,drawdiv)"
+
+>
+
+  <app-ship *ngFor="let ship of ShipsData"
+
+            [info]="ship"
+
+          (mousedown)="HandleShipSlection(ship,$event)"
+  ></app-ship>
+
+
+</div>
+
+</div>

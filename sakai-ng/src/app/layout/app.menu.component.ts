@@ -24,6 +24,9 @@ export class AppMenuComponent implements OnInit {
                 label: 'User Managements',
                 items: [
                     { label: 'Employee List', icon: 'pi pi-fw pi-id-card', routerLink: ['/employee/list'] },
+                    { label: 'Flowchart Designer', icon: 'pi pi-sitemap', routerLink: ['/designer'] }
+
+
 
                 ]
             }
