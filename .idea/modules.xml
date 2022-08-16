@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/OMar/OMar.iml" filepath="$PROJECT_DIR$/OMar/OMar.iml" />
       <module fileurl="file://$PROJECT_DIR$/angularblocks/angularblocks.iml" filepath="$PROJECT_DIR$/angularblocks/angularblocks.iml" />
       <module fileurl="file://$PROJECT_DIR$/backendForPortal/backendForPortal.iml" filepath="$PROJECT_DIR$/backendForPortal/backendForPortal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/moh/moh.iml" filepath="$PROJECT_DIR$/moh/moh.iml" />
     </modules>
   </component>
 </project>

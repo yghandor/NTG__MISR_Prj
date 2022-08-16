@@ -11,6 +11,8 @@
       <excludeFolder url="file://$MODULE_DIR$/angularblocks/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/OMar/dist" />
       <excludeFolder url="file://$MODULE_DIR$/OMar/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/moh/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/moh/tmp" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
